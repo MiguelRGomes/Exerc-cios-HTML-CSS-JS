@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Exemplo 2</title>
+        <meta charset="utf-8"/> <!-- sistema de codificação aceita ç á à ã -->
+        <!-- meta é auto-explicação falar de si mesmo-->
+    </head>
+    <style>
+                /* CSS */
+        /* regra se aplica apenas ao elemento ul dentro do menu*/
+        #menu ul {
+            outline: black 2px solid;
+            padding: 10px; /*espaçamento interno de 0px*/
+            margin: 10px; /*espaçamento externo de 0px da lista*/
+            background-color: white; /* cor de fundo da lista */
+            list-style: none; /* lista não terá bolinhas - os itens */
+        }
+        /* regra se aplica aos itens da lista do menu*/
+        #menu ul li {
+            display: inline; /* os itens da lista ficarão em uma única linha*/
+            padding: 40px; /* espaçamento interno entre os itens */
+        }
+        /* regra se aplica ao link dos itens da lista do menu*/
+        #menu ul li a {
+            background-color: white; /* cor de fundo */
+            color: black; /* cor do texto */
+            text-decoration: none; /* sem sublinhado */
+            border-bottom: 3px solid #000000; 
+        }
+        #conteudo {
+            width: 800px;
+            margin: 50px auto;
+        }
+        #tabela{
+            font-family: Arial, Helvetica, sans-serif; /* tipo da fonte */
+            width: 100%; /* ocupa 100% dos 800px */
+            border-collapse: collapse;
+            height: 200px;
+        }
+        td, th {
+            border: 1px solid #ddd;
+        }
+        th {
+            background: blueviolet; /* cabeçalho com fundo verde */
+            color: burlywood;  /* cabeçalho com texto branco */  
+        }
+        tr:hover { /* qunado passar o mouse em cima da linha */
+            background-color: violet;
+        }
+        .menu-suspenso {
+            position: relative; /* conteúdo atual acompanha conteúdo da página*/
+            display: inline-block; /* mostra conteúdo em única linha */
+        }
+        .conteudo-menu-suspenso {
+            display: none;
+            position: absolute; /* conteúdo atual não acompnha contrúdo página */
+            background-color: cyan;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
+        }
+        .menu-suspenso:hover .conteudo-menu-suspenso { /* quando passar o mouse*/
+            display: block; /* coloca para mostar*/
+        }
+        .conteudo-menu-suspenso a {
+            display: block; /* faz aparecer uma única linha */
+            padding: 4px;
+            text-decoration: none; /* link não ficar sublinahdo */
+        }
+    </style>
+    <body>
+        <div>
+            <nav id="menu"> <!-- menu de navegação -->
+                <ul> <!-- unorded list ou lista não ordenada -->
+                    <li> <a href="home.html"> Home </a> </li> <!-- list item ou item da lista -->
+                    <li> <a href="viagem.html"> Custo de viagem </a> </li>
+                    <li> <a href="sobre.html"> Sobre </a> </li>
+                    <li> <a href="galeria.html"> Galeria de Imagens </a></li>
+                    <li> <a href="videos.html"> Videos do YouTube </a></li>
+                    <li> <a href="tabela.html"> Tabela Nutriciconal </a></li>
+                    <li>
+                        <div class="menu-suspenso">
+                            Calculadora do IMC 
+                            <div class="conteudo-menu-suspenso">
+                                <a href="imc-homem.html"> Homem </a>
+                                <a href="imc-mulher.html"> Mulher </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>            
+            </nav>
+            <!-- o atributo class permite associarmos a mais de um elemento (reutilização) -->
+            <!-- o atributo id permite associarmos a apenas um elemento -->
+        </div>
+        <div id="conteudo">
+            <table id="tabela"> <!-- Criamos uma tabela -->
+                <th> <!-- cabeçalho-->
+                    Nome do jogo
+                </th>
+                <th>
+                    Site do jogo
+                </th>
+                <th>
+                    Tipo do jogo
+                </th>
+                <tr> <!-- cria linha -->
+                    <td> <!-- cria uma célula -->GTA </td>
+                    <td> <a href="https://www.epicgames.com/store/pt-BR/p/grand-theft-auto-v">
+                        https://www.epicgames.com/store/pt-BR/p/grand-theft-auto-v 
+                        </a> </td>
+                    <td> Jogo maldoso </td>
+                </tr>
+                <tr> <!-- cria linha -->
+                    <td> <!-- cria uma célula --> Fortnite </td>
+                    <td> <a href="https://www.epicgames.com/fortnite/pt-BR/home">
+                        https://www.epicgames.com/fortnite/pt-BR/home 
+                        </a></td>
+                    <td> Jogo em primeira pessoa </td>
+                </tr>
+                <tr> <!-- cria linha -->
+                    <td> <!-- cria uma célula --> Rocekt League </td>
+                    <td> <a href="https://www.rocketleague.com/pt-br/">
+                        https://www.rocketleague.com/pt-br/  
+                        </a></td>                 
+                    <td> Esporte </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

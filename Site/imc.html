@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Exemplo 2</title>
+        <meta charset="utf-8"/> <!-- sistema de codificação aceita ç á à ã -->
+        <!-- meta é auto-explicação falar de si mesmo-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+                /* CSS */
+        #formulario {
+            outline: blue 2px solid; /* borda externa azul de 2px de espessura */
+            padding: 10px; /* espaçãmento interno de 10 pixels (bolinha) */
+            width: 550px; /* largura do formulario */
+            margin: 40px auto; /* espaçamento externo de 40 pixels centralizado */
+        }
+        #divpeso, #divaltura, #botao, #divresultado {
+            margin: 10px;
+        }
+        .h2cor-a{
+            color: blue;
+            margin: 20px;
+        }
+        /* regra se aplica apenas ao elemento ul dentro do menu*/
+        #menu ul {
+            outline: black 2px solid;
+            padding: 10px; /*espaçamento interno de 0px*/
+            margin: 10px; /*espaçamento externo de 0px da lista*/
+            background-color: white; /* cor de fundo da lista */
+            list-style: none; /* lista não terá bolinhas - os itens */
+        }
+        /* regra se aplica aos itens da lista do menu*/
+        #menu ul li {
+            display: inline; /* os itens da lista ficarão em uma única linha*/
+            padding: 40px; /* espaçamento interno entre os itens */
+        }
+        /* regra se aplica ao link dos itens da lista do menu*/
+        #menu ul li a {
+            background-color: white; /* cor de fundo */
+            color: black; /* cor do texto */
+            text-decoration: none; /* sem sublinhado */
+            border-bottom: 3px solid #000000; 
+        }
+
+        #custodeviagem {
+            outline: red 2px solid; /* borda externa azul de 2px de espessura */
+            padding: 10px; /* espaçãmento interno de 10 pixels (bolinha) */
+            width: 550px; /* largura do formulario */
+            margin: 40px auto; /* espaçamento externo de 40 pixels centralizado */
+        }
+        #divpedágio1, #divpedágio2, #divcombustível, #botao, #divvalortotal {
+            margin: 10px;
+        }
+        .h2cor-b {
+            color:red;
+            margin: 20px;
+            }
+    </style>
+    <script type="text/javascript" src="js/imc.js"> </script>
+    <body>
+        <div>
+            <nav id="menu"> <!-- menu de navegação -->
+                <ul> <!-- unorded list ou lista não ordenada -->
+                    <li> <a href="home.html"> Home </a> </li> <!-- list item ou item da lista -->
+                    <li> <a href="imc.html"> Calculadora do IMC </a> </li>
+                    <li> <a href="viagem.html"> Custo de viagem </a> </li>
+                    <li> <a href="sobre.html"> Sobre </a> </li>
+                    <li> <a href="galeria.html"> Galeria de Imagens </a></li>
+                    <li> <a href="videos.html"> Videos do YouTube </a></li>
+                    <li> <a href="tabela.html"> Tabela Nutriciconal </a></li>
+                </ul>            
+            </nav>
+        </div>
+        <div id="formulario">
+            <h2 class=h2cor-a> Calculadora de IMC - Índice de Massa Corpórea </h2>
+            <div id="divpeso"> <!-- container -->
+                <label> Peso </label> <!-- rótulo -->
+                <input type="number" id="peso"/> <!-- caixa de entrada de dados -->
+            </div>
+            <div id="divaltura">
+                <label> Altura </label>
+                <input type="number" id="altura"/>
+            </div>
+            <div id="botao">
+                <button onClick="organizar()" type="button"> Calcular </button>
+            </div>
+            <div id="divresultado"> 
+                <p>Resultado: <input id="resultado" /></p>
+            </div>
+        </div>
+    </body>
+</html>

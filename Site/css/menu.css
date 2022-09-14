@@ -1,0 +1,21 @@
+
+        /* regra se aplica apenas ao elemento ul dentro do menu*/
+        #menu ul {
+            outline: black 2px solid;
+            padding: 10px; /*espaçamento interno de 0px*/
+            margin: 10px; /*espaçamento externo de 0px da lista*/
+            background-color: white; /* cor de fundo da lista */
+            list-style: none; /* lista não terá bolinhas - os itens */
+        }
+        /* regra se aplica aos itens da lista do menu*/
+        #menu ul li {
+            display: inline; /* os itens da lista ficarão em uma única linha*/
+            padding: 40px; /* espaçamento interno entre os itens */
+        }
+        /* regra se aplica ao link dos itens da lista do menu*/
+        #menu ul li a {
+            background-color: white; /* cor de fundo */
+            color: black; /* cor do texto */
+            text-decoration: none; /* sem sublinhado */
+            border-bottom: 3px solid #000000; 
+        }

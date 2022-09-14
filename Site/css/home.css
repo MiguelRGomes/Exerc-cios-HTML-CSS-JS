@@ -1,0 +1,9 @@
+/* CSS */
+#caixa {
+    background-color: lightblue; /* cor de fundo*/
+    width: 300px; /*largura da caixa*/
+    border: 15px solid green; /* borda da cixa com espessura de 15px */
+    padding: 50px; /* espaçamento interno da caixa de 50px  na esquerda, direito, abaixo e acima*/
+    margin: 50px auto; /* espaçamento externo da caixa*/
+}
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Exemplo 2</title>
+        <meta charset="utf-8"/> <!-- sistema de codificação aceita ç á à ã -->
+        <!-- meta é auto-explicação falar de si mesmo-->
+    </head>
+    <style>
+                /* CSS */
+        #caixa {
+            background-color: lightblue; /* cor de fundo*/
+            width: 300px; /*largura da caixa*/
+            border: 15px solid green; /* borda da cixa com espessura de 15px */
+            padding: 50px; /* espaçamento interno da caixa de 50px  na esquerda, direito, abaixo e acima*/
+            margin: 50px auto; /* espaçamento externo da caixa*/
+        }
+
+        /* regra se aplica apenas ao elemento ul dentro do menu*/
+        #menu ul {
+            outline: black 2px solid;
+            padding: 10px; /*espaçamento interno de 0px*/
+            margin: 10px; /*espaçamento externo de 0px da lista*/
+            background-color: white; /* cor de fundo da lista */
+            list-style: none; /* lista não terá bolinhas - os itens */
+        }
+        /* regra se aplica aos itens da lista do menu*/
+        #menu ul li {
+            display: inline; /* os itens da lista ficarão em uma única linha*/
+            padding: 40px; /* espaçamento interno entre os itens */
+        }
+        /* regra se aplica ao link dos itens da lista do menu*/
+        #menu ul li a {
+            background-color: white; /* cor de fundo */
+            color: black; /* cor do texto */
+            text-decoration: none; /* sem sublinhado */
+            border-bottom: 3px solid #000000; 
+        }
+    </style>
+    <body>
+        <div>
+            <nav id="menu"> <!-- menu de navegação -->
+                <ul> <!-- unorded list ou lista não ordenada -->
+                    <li> <a href="home.html"> Home </a> </li> <!-- list item ou item da lista -->
+                    <li> <a href="imc.html"> Calculadora do IMC </a> </li>
+                    <li> <a href="viagem.html"> Custo de viagem </a> </li>
+                    <li> <a href="sobre.html"> Sobre </a> </li>
+                    <li> <a href="galeria.html"> Galeria de Imagens </a></li>
+                    <li> <a href="videos.html"> Videos do YouTube </a></li>
+                    <li> <a href="tabela.html"> Tabela Nutriciconal </a></li>
+                </ul>            
+            </nav>
+        </div>
+        <div id="caixa">
+        </div>
+    </body>
+</html>
